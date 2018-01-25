@@ -15,10 +15,14 @@ function sort(array){
  if (array === null){
      return null;
  }
- // loop through array //       
+ // loop through array twice //
+ // starts at index [0] //       
     for (var i = 0; i < array.length; i++){
+        // starts at index [1] //
         for(var j = 1; j < array.length; j++){
+            // checks to see if first index is larger than second //
             if(array[j - 1] > array[j]){
+                // uses helper function to swap numbers //
                 swap(array, j - 1, j);
             }
         }
